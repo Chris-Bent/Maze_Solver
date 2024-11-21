@@ -3,11 +3,11 @@ from tkinter import BOTH
 from tkinter import Canvas
 
 class Window():
-    def __init__(self, width, height)
+    def __init__(self, width, height):
         
         # Create Tk window
         self.__root = Tk()
-        __root.title("Maze Solver")
+        self.__root.title("Maze Solver")
         self.__root.protocol(
             "WM_delete_window", self.close
             )
@@ -21,17 +21,22 @@ class Window():
         self.running = False
 
     # Screen update method
-    def redraw():
+    def redraw(self):
         self.__root.update_idletasks()
         self.__root.update()
         
-    def waitForClose():
+    def waitForClose(self):
         self.running = True
         while self.running == True:
             self.redraw()
 
-    def close():
-        running = False
+    def close(self):
+        self.running = False
 
-    def drawLine():
+    def drawLine(self, Line, fillColour):
+        line = Line(draw)
+        getLine = draw.Line(Canvas, "White")
         
+
+
+
