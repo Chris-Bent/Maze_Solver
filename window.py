@@ -1,6 +1,4 @@
-from tkinter import Tk
-from tkinter import BOTH
-from tkinter import Canvas
+\
 
 class Window():
     def __init__(self, width, height)
@@ -8,7 +6,9 @@ class Window():
         # Create Tk window
         self.__root = Tk()
         __root.title("Maze Solver")
-        self.__root.protocol("WM_delete_window", self.close)
+        self.__root.protocol(
+            "WM_delete_window", self.close
+            )
 
         # Creating a screen that can expand
         # to the size of the window
