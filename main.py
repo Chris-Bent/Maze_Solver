@@ -31,41 +31,48 @@ class Window():
     def close(self):
         self.running = False
 
-    def drawLine(self, Line, fillColour):
-        line = Line(draw)
-        getLine = draw.Line(Canvas, "White")
         
-
 class Point():
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
 class Line():
-    def __init__(self, x, y):
+    def __init__(self, startPoint, endPoint):
         self.startPoint = startPoint
         self.endPoint = endPoint
-        
-    def draw(self, Canvas, fillColour):
+            
+    def draw(self, canvas, fillColour="black"):
         canvas.create_line(
             self.startPoint.x, self.startPoint.y,
             self.endPoint.x, self.endPoint.y, 
             fill=fillColour, width=2
         )
 
+class Cell():
+    def __init__(self):
+        self.hasLeftWall = hasLeftWall
+        self.hasRightWall = hasRightWall
+        self.hasTopWall = hasTopWall
+        self.hasBottomWall = hasBottomWall
+        self._x1 = _x1
+        self._x2 = _x2
+        self._y1 = _y1
+        self._y2 = _y2
+        
+
 def main():
 
     win = Window(800, 600)
-    win.waitForClose()
 
-    pointOne = Point(50)
-    pointTwo = Point(350)
+    pointOne = Point(50, 50)
+    pointTwo = Point(350, 350)
 
     line = Line(pointOne, pointTwo)
 
-    line.draw(window.screen, fillColour)
+    line.draw(win.screen, fillColour="red")
 
-    window.waitForClose()
+    win.waitForClose()
 
 if __name__ == "__main__":
     main()
