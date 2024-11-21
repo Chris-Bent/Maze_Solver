@@ -1,4 +1,6 @@
-\
+from tkinter import Tk
+from tkinter import BOTH
+from tkinter import Canvas
 
 class Window():
     def __init__(self, width, height)
@@ -30,3 +32,6 @@ class Window():
 
     def close():
         running = False
+
+    def drawLine():
+        
